@@ -1,0 +1,19 @@
+*****************************************************************************
+* Copyright (c) 2019 NVIDIA Corporation.  All rights reserved.
+*
+* NVIDIA Corporation and its licensors retain all intellectual property
+* and proprietary rights in and to this software, related documentation
+* and any modifications thereto.  Any use, reproduction, disclosure or
+* distribution of this software and related documentation without an express
+* license agreement from NVIDIA Corporation is strictly prohibited.
+*****************************************************************************
+
+Prequisites:
+
+Please follow instructions in the apps/sample_apps/deepstream-app/README on how
+to install the prequisites for Deepstream SDK, the DeepStream SDK itself and the
+apps.
+
+Pipeline:
+filesrc -> jpegparse -> nvv4l2decoder -> nvstreammux -> nvinfer (segmentation)
+nvsegvidsual -> nvmultistreamtiler -> (nvegltransform) -> nveglglessink
